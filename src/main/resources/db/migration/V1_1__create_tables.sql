@@ -104,7 +104,6 @@ CREATE TABLE public."role"
 (
     id        bigserial               NOT NULL,
     name      character varying(512)  NOT NULL,
-    password  character varying(1024) NOT NULL,
     create_at timestamp with time zone,
     PRIMARY KEY (id),
     UNIQUE (name)
@@ -124,7 +123,7 @@ CREATE TABLE public."roles_permissions"
     id            bigserial NOT NULL,
     role_id       bigint,
     permission_id bigint,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE public."user"

@@ -15,6 +15,7 @@ import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import java.io.IOException;
 
+/*
 @Component
 public class AuthorizationFilter extends OncePerRequestFilter {
     private HandlerExceptionResolver handlerExceptionResolver;
@@ -47,3 +48,5 @@ public class AuthorizationFilter extends OncePerRequestFilter {
         this.userService = userService;
     }
 }
+
+ */
