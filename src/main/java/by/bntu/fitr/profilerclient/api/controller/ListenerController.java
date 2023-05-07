@@ -40,6 +40,12 @@ public class ListenerController {
         return new ResponseEntity<>(applicationMapper.mapToListenerResponseDTO(listener), HttpStatus.CREATED);
     }
 
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<ListenerResponseDTO> getListenerById(@PathVariable(value = "id") Long id) {
+        ListenerEntity listenerEntity = listenerService.getListenerById(id);
+        return new ResponseEntity<>(applicationMapper.mapToListenerResponseDTO(listenerEntity), HttpStatus.OK);
+    }
+
     @PostMapping(value = "/settings")
     public ResponseEntity<ListenerSettingsResponseDTO> createListenerSettings(@RequestBody final ListenerSettingsCreateRequestDTO listenerSettingsCreateRequestDTO) {
         ListenerSettingsEntity listenerSettings = listenerService.createListenerSettings(listenerSettingsCreateRequestDTO);

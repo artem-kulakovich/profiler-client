@@ -15,6 +15,8 @@ public interface ListenerService {
 
     ListenerEntity createListener(final ListenerCreateRequestDTO listenerCreateRequestDTO);
 
+    ListenerEntity getListenerById(final Long id);
+
     ListenerSettingsEntity createListenerSettings(final ListenerSettingsCreateRequestDTO listenerSettingsCreateRequestDTO);
 
     void bindSettingsToListener(final Long listenerId, final Long settingsId);

@@ -78,6 +78,11 @@ public class ListenerServiceImpl implements ListenerService {
     }
 
     @Override
+    public ListenerEntity getListenerById(final Long id) {
+        return getListenerByIdOrThrowException(id);
+    }
+
+    @Override
     public ListenerSettingsEntity createListenerSettings(final ListenerSettingsCreateRequestDTO listenerSettingsCreateRequestDTO) {
         if (listenerSettingsRepository.findByName(listenerSettingsCreateRequestDTO.getName()).isPresent()) {
             throw new AlreadyExistsException("listener settings with name: " + listenerSettingsCreateRequestDTO.getName() + " already exists");
