@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface TimedMetricRepository extends JpaRepository<TimedMetricEntity, Long> {
 
-    List<TimedMetricEntity> findByStartedDateGreaterThanEqualAndEndedDateLessThanEqual(LocalDateTime from, LocalDateTime to);
+    List<TimedMetricEntity> findByMethodNameAAndClassNameAndStartedDateGreaterThanEqualAndEndedDateLessThanEqual(LocalDateTime from, LocalDateTime to);
 
     List<TimedMetricEntity> findByExecutionTimeGreaterThanEqual(Long executionTime);
 

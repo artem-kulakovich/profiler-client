@@ -16,4 +16,10 @@ public class TimedMetricBetweenDatesRequestDTO {
 
     @JsonProperty(value = "to")
     private LocalDateTime to;
+
+    @JsonProperty(value = "methodName")
+    private String methodName;
+
+    @JsonProperty(value = "className")
+    private String className;
 }

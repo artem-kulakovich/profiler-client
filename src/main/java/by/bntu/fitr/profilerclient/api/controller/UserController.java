@@ -31,6 +31,8 @@ public class UserController {
         this.userRolePermissionMapper = userRolePermissionMapper;
     }
 
+    @GetMapping(value = "")
+
     @PostMapping(value = "")
     public ResponseEntity<UserResponseDTO> createUser(@RequestHeader(value = "Authorization") final String authorizationToken,
                                                       @RequestBody UserCreateRequestDTO userCreateRequestDTO) {
