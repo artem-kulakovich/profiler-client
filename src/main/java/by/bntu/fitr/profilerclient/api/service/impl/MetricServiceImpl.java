@@ -52,7 +52,9 @@ public class MetricServiceImpl implements MetricService {
 
     @Override
     public List<TimedMetricEntity> getTimedMetricsBetweenCertainTime(final TimedMetricBetweenDatesRequestDTO timedMetricBetweenDatesRequestDTO) {
-        return timedMetricRepository.findByStartedDateGreaterThanEqualAndEndedDateLessThanEqual(timedMetricBetweenDatesRequestDTO.getFrom(),
+        return timedMetricRepository.findByMethodNameAndClassNameAndStartedDateGreaterThanEqualAndEndedDateLessThanEqual(timedMetricBetweenDatesRequestDTO.getMethodName(),
+                timedMetricBetweenDatesRequestDTO.getClassName(),
+                timedMetricBetweenDatesRequestDTO.getFrom(),
                 timedMetricBetweenDatesRequestDTO.getTo());
     }
 
